@@ -1,0 +1,43 @@
+meta {
+  name: Create Session
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{KLARNA_API_BASE_URL}}{{KLARNA_API_SESSION_CREATION_ENDPOINT}}
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "acquiring_channel": "ECOMMERCE",
+    "intent": "buy",
+    "purchase_country": "SE",
+    "purchase_currency": "SEK",
+    "locale": "en-SE",
+    "order_amount": 0,
+    "order_lines": [
+      {
+        "product": {
+          "id": 4,
+          "name": "Snowdrift",
+          "description": "Pantone 532 C",
+          "shade": "Light",
+          "image": "https://placehold.co/1200x800",
+          "hex": "#F2EDE4"
+        },
+        "variant": {
+          "id": 3,
+          "name": "55\"",
+          "price": 9900
+        },
+        "quantity": 1
+      }
+    ],
+    "merchant_urls": {
+      "authorization": "https://webhook.site/c946dbb4-be8e-4045-baf5-1fefcbb19444"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+Edge Cases
+2. Cart becomes dirty
+3. Klarna session fails to initialize
+4. Klarna SDK fails to load
+5. Klarna SDK fails load the session
+
+
+Add data validation on the CreateSession func
+
+Add options for different billing address]
+
+
+create /payment/success /payment/error /payment/error/not-allowed

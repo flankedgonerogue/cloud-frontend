@@ -1,0 +1,71 @@
+{
+  "pond": {
+    "productName": "Pond™ 55\"",
+    "description": "Our display, offered in four colors and three sizes, blends seamlessly with your store’s aesthetic, avoiding intrusive logos and exaggerated design. Tailored for indoor retail, it provides 500 nits of brightness, ideal for commercial spaces and is built to operate reliably 24 hours a day.",
+    "addToCartButton": "Add to Cart"
+  },
+  "checkout": {
+    "cartDetails": {
+      "emptyMsg": "Your cart is currently empty. ",
+      "emptyLink": "Check out the pond series!",
+      "quantity": "Quantity: ",
+      "price": "Price: ",
+      "tax": "Tax: ",
+      "remove": "Remove",
+      "total": "Total: ",
+      "updateCartButton": "Update Cart"
+    },
+    "customerDetails": {
+      "flowState": {
+        "creatingOrder": "Creating your order",
+        "authorizingPayment": "Processing your payment",
+        "ready": "Place order",
+        "emptyCartError": "Your cart is empty",
+        "idle": "Loading...",
+        "default": "An error occurred"
+      },
+      "form": {
+        "title": "Customer Details",
+        "firstNameLabel": "First Name",
+        "firstNamePlaceholder": "Your first name",
+        "lastNameLabel": "Last Name",
+        "lastNamePlaceholder": "Your last name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Your email",
+        "emailHint": "We'll send your order confirmation to this email address.",
+        "streetAddressLabel": "Street Address",
+        "streetAddressPlaceholder": "Your street address",
+        "postalCodeLabel": "Postal Code",
+        "postalCodePlaceholder": "Your postal code",
+        "cityLabel": "City",
+        "cityPlaceholder": "Your city",
+        "countryLabel": "Country",
+        "countryPlaceholder": "Select your country",
+        "phoneLabel": "Phone Number",
+        "phonePlaceholder": "+46701740615",
+        "firstNameLengthError": "First name must be more than 1 character",
+        "firstNameInvalidError": "Invalid characters in first name",
+        "lastNameLengthError": "Last name must be more than 1 character",
+        "lastNameInvalidError": "Invalid characters in last name",
+        "emailInvalidError": "Invalid email address",
+        "streetAddressRequired": "Please enter a street address",
+        "postalCodeRequired": "Please enter a postal code",
+        "postalCodeFormatInvalid": "Invalid postal code format for {{code}}",
+        "cityRequired": "Please enter a city",
+        "countryRequired": "Please select a country",
+        "countryInvalid": "Please select a country",
+        "phoneInvalid": "Invalid phone number"
+      }
+    }
+  },
+  "navbar": {
+    "store": "Store",
+    "checkout": "Checkout"
+  },
+  "cartSidebar": {
+    "cart": "Cart",
+    "yourCart": "Your cart",
+    "totalPrice": "Total Price: ",
+    "checkout": "Checkout"
+  }
+}

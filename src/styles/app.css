@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@import "./radio-group.css";
+
+@theme {
+  --color-background-dark: #0a0a0a;
+  --color-primary: #f9f3eb;
+  --color-alternative: #0a0a0a;
+}

@@ -1,0 +1,71 @@
+{
+  "pond": {
+    "productName": "Pond™ 55\"",
+    "description": "Vår skärm, tillgänglig i fyra färger och tre storlekar, smälter sömlöst in i din butiks estetik utan påträngande logotyper eller överdriven design. Anpassad för inomhusbruk i butiksmiljöer, den levererar 500 nits ljusstyrka och är byggd för att fungera pålitligt dygnet runt.",
+    "addToCartButton": "Lägg i varukorgen"
+  },
+  "checkout": {
+    "cartDetails": {
+      "emptyMsg": "Din varukorg är för närvarande tom. ",
+      "emptyLink": "Kolla in pond-serien!",
+      "quantity": "Antal: ",
+      "price": "Pris: ",
+      "tax": "Moms: ",
+      "remove": "Ta bort",
+      "total": "Totalt: ",
+      "updateCartButton": "Uppdatera varukorg"
+    },
+    "customerDetails": {
+      "flowState": {
+        "creatingOrder": "Skapar din beställning",
+        "authorizingPayment": "Bearbetar din betalning",
+        "ready": "Slutför beställning",
+        "emptyCartError": "Din varukorg är tom",
+        "idle": "Laddar...",
+        "default": "Ett fel inträffade"
+      },
+      "form": {
+        "title": "Kunduppgifter",
+        "firstNameLabel": "Förnamn",
+        "firstNamePlaceholder": "Ditt förnamn",
+        "lastNameLabel": "Efternamn",
+        "lastNamePlaceholder": "Ditt efternamn",
+        "emailLabel": "E-post",
+        "emailPlaceholder": "Din e-postadress",
+        "emailHint": "Vi skickar orderbekräftelsen till denna e-postadress.",
+        "streetAddressLabel": "Gatuadress",
+        "streetAddressPlaceholder": "Din gatuadress",
+        "postalCodeLabel": "Postnummer",
+        "postalCodePlaceholder": "Ditt postnummer",
+        "cityLabel": "Stad",
+        "cityPlaceholder": "Din stad",
+        "countryLabel": "Land",
+        "countryPlaceholder": "Välj ditt land",
+        "phoneLabel": "Telefonnummer",
+        "phonePlaceholder": "+46701740615",
+        "firstNameLengthError": "Förnamnet måste innehålla mer än 1 tecken",
+        "firstNameInvalidError": "Ogiltiga tecken i förnamnet",
+        "lastNameLengthError": "Efternamnet måste innehålla mer än 1 tecken",
+        "lastNameInvalidError": "Ogiltiga tecken i efternamnet",
+        "emailInvalidError": "Ogiltig e-postadress",
+        "streetAddressRequired": "Ange en gatuadress",
+        "postalCodeRequired": "Ange ett postnummer",
+        "postalCodeFormatInvalid": "Ogiltigt postnummerformat för {{code}}",
+        "cityRequired": "Ange en stad",
+        "countryRequired": "Välj ett land",
+        "countryInvalid": "Välj ett giltigt land",
+        "phoneInvalid": "Ogiltigt telefonnummer"
+      }
+    }
+  },
+  "navbar": {
+    "store": "Butik",
+    "checkout": "Kassa"
+  },
+  "cartSidebar": {
+    "cart": "Varukorg",
+    "yourCart": "Din varukorg",
+    "totalPrice": "Totalt pris: ",
+    "checkout": "Till kassan"
+  }
+}
