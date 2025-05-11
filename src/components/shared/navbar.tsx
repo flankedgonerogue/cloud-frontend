@@ -28,6 +28,19 @@ const Navbar: FC = () => {
       <Link href="/" className="ml-6 md:ml-20">
         <Image src="/logo_light.png" width={854} height={231} alt="North2 logo" className="h-8 w-auto" />
       </Link>
+      {currentPage === "home" && (
+        <div className="ml-8 flex flex-row gap-4">
+          <Link href="/pond" className="content-center p-2 text-center text-green-500 hover:text-green-400">
+            Pond
+          </Link>
+          <Link href="/gaming" className="content-center p-2 text-center text-green-500 hover:text-green-400">
+            VantaCore
+          </Link>
+          <Link href="/workstation" className="content-center p-2 text-center text-green-500 hover:text-green-400">
+            NexaFrame
+          </Link>
+        </div>
+      )}
       <div className="ml-auto mr-2 flex flex-row gap-2 md:mr-20">
         {" "}
         {currentPage === "checkout" && (

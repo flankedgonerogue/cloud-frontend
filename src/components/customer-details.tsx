@@ -250,6 +250,7 @@ const CustomerDetails: FC = () => {
           })
           .catch(() => {
             flowState.current = FlowState.FailedToCreateOrder;
+            router.push('/payments/error')
           });
       },
     );

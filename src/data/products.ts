@@ -33,6 +33,72 @@ export const products: Product[] = [
     shade: "Light",
     image: "https://placehold.co/1920x1080",
   },
+  // Gaming Products
+  {
+    id: 5,
+    name: "Neon Pulse",
+    description: "Galone 767 C",
+    hex: "#FF00FF",
+    shade: "Dark",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 6,
+    name: "Cyber Black",
+    description: "Galone 721 C",
+    hex: "#1A1A1A",
+    shade: "Dark",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 7,
+    name: "Quantum Blue",
+    description: "Galone 769 C",
+    hex: "#0066FF",
+    shade: "Dark",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 8,
+    name: "Phantom Silver",
+    description: "Galone 777 C",
+    hex: "#C0C0C0",
+    shade: "Light",
+    image: "https://placehold.co/1920x1080",
+  },
+  // Workstation Products
+  {
+    id: 9,
+    name: "Professional Black",
+    description: "Radon 455 C",
+    hex: "#000000",
+    shade: "Dark",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 10,
+    name: "Executive Gray",
+    description: "Radon 467 C",
+    hex: "#808080",
+    shade: "Dark",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 11,
+    name: "Platinum White",
+    description: "Radon 479 C",
+    hex: "#E5E4E2",
+    shade: "Light",
+    image: "https://placehold.co/1920x1080",
+  },
+  {
+    id: 12,
+    name: "Graphite",
+    description: "Radon 458 C",
+    hex: "#2F4F4F",
+    shade: "Dark",
+    image: "https://placehold.co/1920x1080",
+  },
 ];
 
 export const variants: Variant[] = [
