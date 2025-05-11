@@ -4,6 +4,16 @@
     "description": "Vår skärm, tillgänglig i fyra färger och tre storlekar, smälter sömlöst in i din butiks estetik utan påträngande logotyper eller överdriven design. Anpassad för inomhusbruk i butiksmiljöer, den levererar 500 nits ljusstyrka och är byggd för att fungera pålitligt dygnet runt.",
     "addToCartButton": "Lägg i varukorgen"
   },
+  "gaming": {
+    "productName": "Spelskärm™ 55",
+    "description": "Upplev spel som aldrig förr med våra högpresterande spelskärmar. Ultra-snabb uppdateringsfrekvens och fantastiska visuella effekter för den ultimata spelupplevelsen.",
+    "addToCartButton": "Lägg i varukorgen"
+  },
+  "workstation": {
+    "productName": "Professionell™ 55",
+    "description": "Precisionskonstruerade skärmar för professionell innehållsskapande och design. Färgkorrekta skärmar med exceptionell skärpa för krävande yrkesverksamma.",
+    "addToCartButton": "Lägg i varukorgen"
+  },
   "checkout": {
     "cartDetails": {
       "emptyMsg": "Din varukorg är för närvarande tom. ",

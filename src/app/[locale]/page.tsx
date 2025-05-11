@@ -1,151 +1,90 @@
 "use client";
 
 import { FC, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { products, variants } from "@/data/products";
+import { motion } from "framer-motion";
 import { clsx } from "clsx";
-import AddToCartButton from "@/components/add-to-cart-button";
-import { formatCurrency, getProductById, getVariantById } from "@/lib/utils";
-
+import Image from "next/image";
 import * as React from "react";
-import { Select } from "radix-ui";
-import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
-import { useTranslations } from "next-intl";
+import { redirect } from "next/navigation";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const Page: FC = () => {
-  const t = useTranslations("pond");
-  const [selectedProductId, setSelectedProductId] = useState<number>(1);
-  const [selectedVariantId, setSelectedVariantId] = useState<number>(3);
-
   return (
     <main
       id="product-page"
       className={clsx(
-        "min-h-screen w-screen",
-        getProductById(selectedProductId)?.shade === "Dark" ? "text-white" : "text-black",
-        "transition-colors duration-500 ease-linear",
-        "flex flex-col items-center overflow-clip px-6 pb-6 pt-28 text-[1rem] md:flex-row md:gap-x-20 md:px-40 md:pt-20 md:text-[1.25rem]",
+        "min-h-screen w-screen relative overflow-clip",
+        "flex flex-col items-center justify-center px-4 pb-8 pt-32 md:flex-row md:gap-x-20 md:px-32 md:pt-20",
+        "bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#203a43]"
       )}
-      style={{
-        backgroundColor: getProductById(selectedProductId)?.hex,
-      }}
     >
-      <div className="flex flex-col gap-6 md:w-1/2">
-        <h1 className="text-[1.75rem] md:text-[2rem]">{t("productName")}</h1>
-        <p>{t("description")}</p>
-        <div className="flex flex-col gap-4 md:flex-row">
-          {products.map((product) => (
-            <motion.button
-              key={product.id}
-              className={clsx(
-                "h-[50px] w-[50px] max-w-[275px] cursor-pointer overflow-hidden text-nowrap rounded-full border-2 md:max-w-[350px]",
-                getProductById(selectedProductId)?.shade === "Light" ? "border-black" : "border-white",
-              )}
-              style={{
-                backgroundColor: product.hex,
-              }}
-              animate={
-                selectedProductId === product.id
-                  ? {
-                      width: "350px",
-                    }
-                  : { width: "50px" }
-              }
-              transition={{
-                duration: 0.5,
-              }}
-              onClick={() => setSelectedProductId(product.id)}
-            >
-              <motion.span
-                initial={{ opacity: 0 }}
-                animate={selectedProductId === product.id ? { opacity: 1 } : { opacity: 0 }}
-                transition={{ duration: 0.25 }}
-              >
-                <strong className="font-medium">{product.name}</strong> -{" "}
-                <span className="">{product.description}</span>
-              </motion.span>
-            </motion.button>
-          ))}
-        </div>
-        <Select.Root
-          defaultValue="3"
-          onValueChange={(value) => {
-            console.debug(value);
-            setSelectedVariantId(parseInt(value));
+      <div className="flex flex-row items-center justify-center w-full">
+        <motion.div
+          className="flex flex-col gap-10 text-white w-[50%]"
+          initial={{
+            opacity: 0,
+            y: 40
+          }}
+          animate={{
+            opacity: 1,
+            y: 0
+          }}
+          transition={{
+            duration: 0.8,
+            ease: "easeIn"
           }}
         >
-          <Select.Trigger
+          <div className="flex flex-col gap-5">
+            <h1 className="text-6xl font-bold leading-tight">
+              Innovative displays for your business
+            </h1>
+            <p className="text-2xl">
+              Discover high-quality, commercial-grade displays designed for professional use
+            </p>
+            <p className="text-green-200 text-lg">
+              Elevate your workspace with North2's advanced technology
+            </p>
+          </div>
+          <motion.button
             className={clsx(
-              "bg-primary text-alternative inline-flex h-[50px] w-4/5 items-center justify-between gap-[5px] rounded border-2 px-[16px] py-[12px] leading-none outline-none",
-              getProductById(selectedProductId)?.shade === "Light" ? "border-black" : "border-gray-700",
+              "w-[30%] p-4 rounded-2xl hover:cursor-pointer",
+              "bg-gradient-to-r from-green-400 to-green-600 shadow-lg",
+              "focus:outline-none focus:ring-4 focus:ring-green-300"
             )}
-            aria-label="variant"
+            whileTap={{
+              scale: 0.9,
+            }}
+            whileHover={{
+              scale: 1.1,
+              boxShadow: "0 8px 32px 0 rgba(34,197,94,0.25)"
+            }}
+            onClick={() => redirect("/")}
           >
-            <Select.Value placeholder="Select a variant…" />
-            <Select.Icon className="text-alternative">
-              <ChevronDownIcon />
-            </Select.Icon>
-          </Select.Trigger>
-          <Select.Portal>
-            <Select.Content className="bg-primary overflow-hidden rounded-md">
-              <Select.ScrollUpButton className="bg-primary text-alternative flex h-[25px] cursor-default items-center justify-center">
-                <ChevronUpIcon />
-              </Select.ScrollUpButton>
-              <Select.Viewport className="p-[5px]">
-                {variants.map((variant) => (
-                  <Select.Item
-                    key={variant.id}
-                    className="text-alternative data-[disabled]:text-primary/20 relative flex select-none items-center rounded-[3px] px-[32px] py-[12px] leading-none data-[disabled]:pointer-events-none data-[highlighted]:bg-gray-200 data-[highlighted]:font-bold data-[highlighted]:outline-none"
-                    value={variant.id.toString()}
-                  >
-                    <Select.ItemIndicator className="absolute left-0 inline-flex w-[25px] items-center justify-center">
-                      <CheckIcon />
-                    </Select.ItemIndicator>
-                    <Select.ItemText>
-                      {variant.name} — {formatCurrency(variant.unitPrice)} excl. VAT
-                    </Select.ItemText>
-                  </Select.Item>
-                ))}
-              </Select.Viewport>
-              <Select.ScrollDownButton className="text-alternative bg-primary flex h-[25px] cursor-default items-center justify-center">
-                <ChevronDownIcon />
-              </Select.ScrollDownButton>
-            </Select.Content>
-          </Select.Portal>
-        </Select.Root>
-        <AddToCartButton
-          productId={selectedProductId}
-          variantId={selectedVariantId}
-          name={getProductById(selectedProductId)?.name + " " + getVariantById(selectedVariantId)?.name}
-        />
+            Shop Now
+          </motion.button>
+        </motion.div>
+        <motion.div
+          className={clsx(
+            "w-[70%]"
+          )}
+          initial={{
+            opacity: 0,
+            scale: 1.3,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1
+          }}
+          transition={{
+            duration: 0.9,
+            ease: "easeOut"
+          }}
+        >
+          <Image src="/screen.png" width={1920} height={1080} alt="North2 logo" className="h-full w-auto" />
+        </motion.div>
+        <div className="absolute -top-32 -right-32 w-[400px] h-[400px] bg-green-400 opacity-20 rounded-full blur-3xl z-0" />
       </div>
-      <div className="hidden w-1/2 flex-col md:flex">
-        <AnimatePresence mode="wait">
-          <motion.img
-            className="rounded-lg shadow"
-            initial={{
-              x: 300,
-              opacity: 0,
-            }}
-            animate={{
-              x: 0,
-              opacity: 1,
-            }}
-            exit={{
-              x: -300,
-              opacity: 0,
-            }}
-            transition={{
-              type: "tween",
-              ease: "easeInOut",
-              duration: 0.5,
-            }}
-            src={getProductById(selectedProductId)?.image}
-            key={getProductById(selectedProductId)?.id}
-            alt={getProductById(selectedProductId)?.name}
-          ></motion.img>
-        </AnimatePresence>
-      </div>
+      {/* <BackgroundBeams /> */}
     </main>
   );
 };

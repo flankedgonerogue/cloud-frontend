@@ -1,7 +1,17 @@
 {
   "pond": {
     "productName": "Pond™ 55\"",
-    "description": "Our display, offered in four colors and three sizes, blends seamlessly with your store’s aesthetic, avoiding intrusive logos and exaggerated design. Tailored for indoor retail, it provides 500 nits of brightness, ideal for commercial spaces and is built to operate reliably 24 hours a day.",
+    "description": "Our display, offered in four colors and three sizes, blends seamlessly with your store's aesthetic, avoiding intrusive logos and exaggerated design. Tailored for indoor retail, it provides 500 nits of brightness, ideal for commercial spaces and is built to operate reliably 24 hours a day.",
+    "addToCartButton": "Add to Cart"
+  },
+  "gaming": {
+    "productName": "VantaCore™ 55",
+    "description": "Engineered for immersive gameplay, our display delivers ultra-fast refresh rates and vibrant visuals without unnecessary embellishments. Designed with gamers in mind, it offers seamless performance, blending effortlessly into your setup while supporting long hours of use with reliable consistency.",
+    "addToCartButton": "Add to Cart"
+  },
+  "workstation": {
+    "productName": "NexaFrame™ 55",
+    "description": "Crafted for creative professionals, our display offers precise color accuracy and exceptional clarity, ensuring your work is represented exactly as intended. With a clean, unobtrusive design, it integrates effortlessly into studio environments and supports extended use without compromising performance.",
     "addToCartButton": "Add to Cart"
   },
   "checkout": {
