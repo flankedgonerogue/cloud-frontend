@@ -19,3 +19,4 @@ Currently available at https://north2-store.vercel.app
 ## Work on by
 
 Abdur Rahman Goraya through @sfmxdev
+Ubaid Ur Rehman 
