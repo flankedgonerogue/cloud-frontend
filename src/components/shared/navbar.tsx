@@ -59,10 +59,10 @@ const Navbar: FC = () => {
           <Link href="/products/pond" className="content-center p-2 text-center text-green-500 hover:text-green-400">
             Pond
           </Link>
-          <Link href="/products/gaming" className="content-center p-2 text-center text-green-500 hover:text-green-400">
+          <Link href="/products/vantacore" className="content-center p-2 text-center text-green-500 hover:text-green-400">
             VantaCore
           </Link>
-          <Link href="/products/workstation" className="content-center p-2 text-center text-green-500 hover:text-green-400">
+          <Link href="/products/nexaframe" className="content-center p-2 text-center text-green-500 hover:text-green-400">
             NexaFrame
           </Link>
         </div>

@@ -11,7 +11,7 @@ import { Select } from "radix-ui";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
 
-const WorkstationPage: FC = () => {
+const NexaFramePage: FC = () => {
   const t = useTranslations("workstation");
   const [selectedProductId, setSelectedProductId] = useState<number>(9);
   const [selectedVariantId, setSelectedVariantId] = useState<number>(3);
@@ -151,4 +151,4 @@ const WorkstationPage: FC = () => {
   );
 };
 
-export default WorkstationPage; 
+export default NexaFramePage; 

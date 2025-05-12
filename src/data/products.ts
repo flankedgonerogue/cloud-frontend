@@ -7,7 +7,7 @@ export const products: Product[] = [
     hex: "#A58D71",
     description: "Pantone 532 C",
     shade: "Dark",
-    image: "https://placehold.co/1920x1080",
+    image: "/pond/55%22/Morel Brown.jpg",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const products: Product[] = [
     description: "Pantone 3715C",
     hex: "#0A0A0A",
     shade: "Dark",
-    image: "https://placehold.co/1920x1080",
+    image: "/pond/55%22/Stellar.jpg",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const products: Product[] = [
     description: "Pantone 532 C",
     hex: "#4F5D49",
     shade: "Dark",
-    image: "https://placehold.co/1920x1080",
+    image: "/pond/55%22/Forest Green.jpg",
   },
   {
     id: 4,
@@ -31,7 +31,7 @@ export const products: Product[] = [
     description: "Pantone 532 C",
     hex: "#F2EDE4",
     shade: "Light",
-    image: "https://placehold.co/1920x1080",
+    image: "/pond/55%22/Snowdrift.jpg",
   },
   // Gaming Products
   {

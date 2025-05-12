@@ -11,7 +11,7 @@ import { Select } from "radix-ui";
 import { CheckIcon, ChevronDownIcon, ChevronUpIcon } from "@radix-ui/react-icons";
 import { useTranslations } from "next-intl";
 
-const GamingPage: FC = () => {
+const VantaCorePage: FC = () => {
   const t = useTranslations("gaming");
   const [selectedProductId, setSelectedProductId] = useState<number>(5);
   const [selectedVariantId, setSelectedVariantId] = useState<number>(3);
@@ -151,4 +151,4 @@ const GamingPage: FC = () => {
   );
 };
 
-export default GamingPage; 
+export default VantaCorePage; 
